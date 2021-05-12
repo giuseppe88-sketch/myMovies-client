@@ -6,7 +6,7 @@ import './index.scss';
 
 //Main component
 
-class MyMoviesApplication extends React.component{
+class MyMoviesApplication extends React.Component{
     render(){
         return (
         <div className="my-flix">
