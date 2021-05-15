@@ -3,7 +3,7 @@
 52/home/giuseppe/Desktop/myMovies-client/src/index.jsx1620822101621682452 0
 53/home/giuseppe/Desktop/myMovies-client/src/index.scss1620818382876114426 0
 42/home/giuseppe/Desktop/myMovies-client/src1620816563247190588 1
-48/home/giuseppe/Desktop/myMovies-client/README.md1620820376702063486 0
+48/home/giuseppe/Desktop/myMovies-client/README.md1620826011851947335 0
 71/home/giuseppe/Desktop/myMovies-client/node_modules/fill-range/index.js499162500000000000 0
 62/home/giuseppe/Desktop/myMovies-client/node_modules/fill-range1620818603158739970 1
 70/home/giuseppe/Desktop/myMovies-client/node_modules/@parcel/plugin/lib1620818603182739861 1
@@ -171,7 +171,7 @@
 77/home/giuseppe/Desktop/myMovies-client/node_modules/is-binary-path/index.d.ts499162500000000000 0
 75/home/giuseppe/Desktop/myMovies-client/node_modules/node-gyp-build/index.js499162500000000000 0
 84/home/giuseppe/Desktop/myMovies-client/node_modules/react/umd/react.profiling.min.js499162500000000000 0
-66/home/giuseppe/Desktop/myMovies-client/dist/index.d22b8a02.css.map1620822117661801939 0
+66/home/giuseppe/Desktop/myMovies-client/dist/index.d22b8a02.css.map1620826197728985825 0
 99/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/benchmark/property_descriptor.js499162500000000000 0
 74/home/giuseppe/Desktop/myMovies-client/node_modules/picomatch/lib/parse.js499162500000000000 0
 59/home/giuseppe/Desktop/myMovies-client/node_modules/is-glob1620818603158739970 1
@@ -198,17 +198,17 @@
 82/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/doc/external.md499162500000000000 0
 95/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/.github/workflows/linter.yml499162500000000000 0
 68/home/giuseppe/Desktop/myMovies-client/node_modules/is-glob/index.js499162500000000000 0
-54/home/giuseppe/Desktop/myMovies-client/dist/index.html1620822117649801850 0
+54/home/giuseppe/Desktop/myMovies-client/dist/index.html1620826197720985779 0
 85/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/doc/range_error.md499162500000000000 0
 80/home/giuseppe/Desktop/myMovies-client/node_modules/@parcel/transformer-sass/src1620818603190739824 1
 78/home/giuseppe/Desktop/myMovies-client/node_modules/binary-extensions/index.js499162500000000000 0
 65/home/giuseppe/Desktop/myMovies-client/node_modules/scheduler/umd1620813777866339002 1
 82/home/giuseppe/Desktop/myMovies-client/node_modules/react/umd/react.development.js499162500000000000 0
-43/home/giuseppe/Desktop/myMovies-client/dist1620822117669801998 1
+43/home/giuseppe/Desktop/myMovies-client/dist1620826197736985869 1
 100/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/doc/object_lifetime_management.md499162500000000000 0
 74/home/giuseppe/Desktop/myMovies-client/node_modules/picomatch/lib/utils.js499162500000000000 0
 88/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/napi-inl.deprecated.h499162500000000000 0
-61/home/giuseppe/Desktop/myMovies-client/dist/index.02675e63.js1620822117665801969 0
+61/home/giuseppe/Desktop/myMovies-client/dist/index.02675e63.js1620826197732985846 0
 70/home/giuseppe/Desktop/myMovies-client/node_modules/.package-lock.json1620818603538738232 0
 80/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/doc/bigint.md499162500000000000 0
 80/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/noexcept.gypi499162500000000000 0
@@ -230,7 +230,7 @@
 67/home/giuseppe/Desktop/myMovies-client/node_modules/braces/index.js499162500000000000 0
 82/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/CONTRIBUTING.md499162500000000000 0
 58/home/giuseppe/Desktop/myMovies-client/node_modules/braces1620818603182739861 1
-62/home/giuseppe/Desktop/myMovies-client/dist/index.d22b8a02.css1620822117653801880 0
+62/home/giuseppe/Desktop/myMovies-client/dist/index.d22b8a02.css1620826197720985779 0
 82/home/giuseppe/Desktop/myMovies-client/node_modules/react/cjs/react.development.js499162500000000000 0
 92/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/doc/creating_a_release.md499162500000000000 0
 79/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/appveyor.yml499162500000000000 0
@@ -283,7 +283,7 @@
 73/home/giuseppe/Desktop/myMovies-client/node_modules/@parcel/types/LICENSE499162500000000000 0
 98/home/giuseppe/Desktop/myMovies-client/node_modules/scheduler/cjs/scheduler-tracing.development.js499162500000000000 0
 85/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/benchmark/index.js499162500000000000 0
-65/home/giuseppe/Desktop/myMovies-client/dist/index.02675e63.js.map1620822117669801998 0
+65/home/giuseppe/Desktop/myMovies-client/dist/index.02675e63.js.map1620826197736985869 0
 76/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/README.md499162500000000000 0
 78/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/common.gypi499162500000000000 0
 79/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/node_api.gyp499162500000000000 0

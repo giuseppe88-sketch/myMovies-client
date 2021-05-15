@@ -1,0 +1,105 @@
+var helpers = require("../../../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  _parcelHelpers.export(exports, "MainView", function () {
+    return MainView;
+  });
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _movieCardMovieCard = require('../movie-card/movie-card');
+  var _movieViewMovieView = require('../movie-view/movie-view');
+  var _jsxFileName = "/home/giuseppe/Desktop/myMovies-client/src/components/main-view/main-view.jsx";
+  class MainView extends _reactDefault.default.Component {
+    constructor() {
+      super();
+      this.state = {
+        movies: [{
+          _id: 1,
+          Title: 'The Godfather',
+          Description: 'desc1..',
+          ImagePath: '...'
+        }, {
+          _id: 2,
+          Title: 'Psycho',
+          Description: 'desc1..',
+          ImagePath: '...'
+        }, {
+          _id: 3,
+          Title: 'Only lovers left alive',
+          Description: 'desc1..',
+          ImagePath: '...'
+        }],
+        selectedMovie: null
+      };
+    }
+    render() {
+      const {movies, selectedMovie} = this.state;
+      if (selectedMovie) return (
+        /*#__PURE__*/_reactDefault.default.createElement(_movieViewMovieView.MovieView, {
+          movie: selectedMovie,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22,
+            columnNumber: 35
+          }
+        })
+      );
+      if (movies.length === 0) return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "main-view",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 42
+          }
+        }, "The list is empty!")
+      );
+      if (selectedMovie) return (
+        /*#__PURE__*/_reactDefault.default.createElement(_movieViewMovieView.MovieView, {
+          movie: selectedMovie,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 35
+          }
+        })
+      );
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "main-view",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 13
+          }
+        }, movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_movieCardMovieCard.MovieCard, {
+          key: movie._id,
+          movieData: movie,
+          onMovieClick: newSelectedMovie => {
+            this.setState({
+              selectedMovie: newSelectedMovie
+            });
+          },
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29,
+            columnNumber: 37
+          }
+        })))
+      );
+    }
+  }
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
