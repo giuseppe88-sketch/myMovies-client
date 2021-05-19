@@ -1,28 +1,52 @@
 import React from 'react';
+import axios from 'axios';
 
-import {MovieCard } from '../movie-card/movie-card';
-import {MovieView} from '../movie-view/movie-view';
+import { RegistrationView} from '../registration-view/registration-view' 
+import { LoginView } from '../login-view/login-view';
+import { MovieCard } from '../movie-card/movie-card';
+import { MovieView} from '../movie-view/movie-view';
 
 export class MainView extends React.Component {
 
     constructor(){
         super();
         this.state = {
-            movies: [
-                {_id: 1, Title: 'The Godfather' , Description:''},
-                {_id: 2, Title: 'Psycho', Description: 'desc1..', ImagePath: '...'},
-                {_id: 3, Title: 'Only lovers left alive', Description: 'desc1..', ImagePath: '...'},
-            ],
-            selectedMovie: null
+            movies: [],
+            selectedMovie: null,
+            user:null
         }
+    }
+    componentDidMount(){
+        axios.get('https://mymovies-db-api.herokuapp.com/movies')
+        .then(response=>{
+            this.setState({
+                movies:response.data
+            });
+        })
+        .catch(error =>{
+            console.log(error)
+        });
     }
        setSelectedMovie(newSelectedMovie){
            this.setState({
                selectedMovie:newSelectedMovie
            });
        }
+       onRegisterIn(user){
+           this.setState({
+               user
+           })
+       }
+       onLoggedIn(user){
+           this.setState({
+               user
+           })
+       }
     render(){
-        const { movies, selectedMovie } = this.state;
+        const { movies, selectedMovie, user } = this.state;
+        
+        if (!user) return <RegistrationView onRegisterIn = {user => this.onRegisterIn(user)}/>
+        if(!user) return <LoginView onLoggedIn = {user => this.onLoggedIn(user)} />
 
         if (movies.length === 0 ) return <div className= "main-view">The list is empty!</div>;
         
