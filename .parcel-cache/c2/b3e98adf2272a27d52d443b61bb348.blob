@@ -28229,13 +28229,6 @@ try {
   }
   _s(LoginView, "QcDVoLzkhaapaM/rHzQw424eEVs=");
   _c = LoginView;
-  LoginView.propTypes = {
-    user: PropTypes.shape({
-      username: PropTypes.string.isRequired,
-      password: PropTypes.string.isRequired
-    }),
-    onLoggedIn: PropTypes.func.isRequired
-  };
   var _c;
   $RefreshReg$(_c, "LoginView");
   helpers.postlude(module);
@@ -29533,11 +29526,11 @@ try {
   _s(RegistrationView, "c5OQw7/hScRZ/uRg/4sVGfm839o=");
   _c = RegistrationView;
   RegistrationView.propTypes = {
-    user: PropTypes.shape({
+    register: PropTypes.shape({
       username: PropTypes.string.isRequired,
       password: PropTypes.string.isRequired
     }),
-    onRegisterIn: PropTypes.func.isRequired
+    onRegister: PropTypes.func.isRequired
   };
   var _c;
   $RefreshReg$(_c, "RegistrationView");
@@ -29549,4 +29542,4 @@ try {
 
 },{"react":"3b2NM","react-dom":"2sg1U","@parcel/transformer-js/lib/esmodule-helpers.js":"51WnV","../../../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1NuKA"}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire1eb1")
 
-//# sourceMappingURL=index.02675e63.js.map
+//# sourceMappingURL=index.HASH_REF_f9eab60bc3a7a7c3f683683702675e63.js.map
