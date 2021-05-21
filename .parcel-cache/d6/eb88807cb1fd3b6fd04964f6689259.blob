@@ -1,0 +1,11 @@
+.my-flix {
+  color: steelblue;
+}
+
+.app-container {
+  background-color: rgba(156, 226, 226, 0.829);
+}
+
+.form-label {
+  margin-top: 400px;
+}

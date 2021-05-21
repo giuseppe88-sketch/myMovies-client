@@ -1,11 +1,15 @@
 import React, { useState} from 'react';
 import { render } from 'react-dom';
+import PropTypes from 'prop-types';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 export function RegistrationView(props){
      
     const [username,setUsername] = useState('');
     const [password,setPassword] = useState('');
     const [email,setEmail]      =  useState('');
+    
 
     const submitRequest = (e) => {
         e.preventDefault();
@@ -17,18 +21,30 @@ export function RegistrationView(props){
 
 
         return (
-            <form>
-                <label>
-                    Username: <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-                </label>
-                <label> Password: <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-                </label>
-                <label>Email: <input type="email" value={email} onChange={ e=> setEmail(e.target.value)}/>
+    <Form className="form-label">
+      <h2>Sign up</h2>
+        <Form.Group controlId="formUsername">
+          <Form.Label>Username: </Form.Label>
+          <Form.Control type="text" onChange={e => setUsername(e.target.value)} />
+        </Form.Group>
 
-                </label>
-                <button type="submit" onClick={submitRequest}>Submit</button>
-            </form>
-        );
+        <Form.Group controlId="formPassword">
+          <Form.Label>Password: </Form.Label>
+          <Form.Control type="password" onChange={e => setPassword(e.target.value)} />
+        </Form.Group>
+
+        <Form.Group controlId="formEmail">
+          <Form.Label>Email: </Form.Label>
+          <Form.Control type="text" onChange={e => setEmail(e.target.value)} />
+        </Form.Group>
+
+        <Button variant="dark" type="submit" onClick={submitRequest}>
+          Submit
+        </Button>
+    </Form>
+    
+  );
+        
 
     
 }

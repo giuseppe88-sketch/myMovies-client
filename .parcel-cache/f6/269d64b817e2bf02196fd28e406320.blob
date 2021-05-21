@@ -1,0 +1,17 @@
+.my-flix {
+  color: steelblue;
+}
+
+.app-container {
+  background-color: gray;
+}
+
+.form-label h2 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.form-label {
+  padding-bottom: 40px;
+}

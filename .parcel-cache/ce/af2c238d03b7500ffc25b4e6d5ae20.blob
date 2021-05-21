@@ -1,0 +1,7 @@
+.my-flix {
+  color: steelblue;
+}
+
+body {
+  background-color: #53dfdf;
+}

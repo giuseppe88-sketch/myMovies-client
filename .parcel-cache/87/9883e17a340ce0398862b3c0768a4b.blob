@@ -1,0 +1,7 @@
+.my-flix {
+  color: steelblue;
+}
+
+.app-container {
+  background-color: rgba(128, 216, 216, 0.829);
+}
