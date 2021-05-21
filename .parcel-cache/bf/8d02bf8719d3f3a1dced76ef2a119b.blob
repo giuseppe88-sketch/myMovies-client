@@ -5,7 +5,6 @@
 .app-container {
   background-color: rgba(216, 216, 216, 0.788);
   height: auto;
-  padding-top: 40px;
 }
 
 .form-label h2 {
@@ -18,4 +17,3 @@
 .card-mo-vie {
   color: rgba(7, 7, 7, 0.973);
 }
-/*# sourceMappingURL=index.d22b8a02.css.map */
