@@ -5,17 +5,12 @@
 .app-container {
   background-color: rgba(216, 216, 216, 0.788);
   height: auto;
-  padding-top: 40px;
 }
 
 .form-label h2 {
   color: rgba(7, 7, 7, 0.973);
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.card-mo-vie {
-  color: rgba(7, 7, 7, 0.973);
+  padding-bottom: 10px;
 }
 /*# sourceMappingURL=index.d22b8a02.css.map */

@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-
+import { Navbar } from 'react-bootstrap'
 
 export function RegistrationView(props){
      
@@ -22,8 +22,17 @@ export function RegistrationView(props){
 
 
         return (
+  <div className="registration-view">
+    <Navbar bg="dark" variant="dark">
+       <Navbar.Brand>
+         <img src="https://pad.mymovies.it/v12/img/mymovies.png" width="140px"/>{" "}
+        
+       </Navbar.Brand>
+
+    </Navbar>
     <Form className="form-label">
-      <h2>Sign up</h2>
+      <h2>Welcome to MyMoviesApp</h2>
+      
         <Form.Group controlId="formUsername">
           <Form.Label>Username: </Form.Label>
           <Form.Control type="text" onChange={e => setUsername(e.target.value)} />
@@ -43,7 +52,7 @@ export function RegistrationView(props){
           Submit
         </Button>
     </Form>
-    
+  </div>
   );
         
 
