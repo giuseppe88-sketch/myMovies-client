@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Navbar } from 'react-bootstrap'
+import Col from 'react-bootstrap/Col';
 
 export function RegistrationView(props){
      
@@ -13,7 +14,21 @@ export function RegistrationView(props){
     
 
     const submitRequest = (e) => {
-        e.preventDefault();
+      e.preventDefault();
+      axios.post('https://mymovies-db-api.herokuapp.com/users', {
+        username: username,
+        password: password,
+        email: email,
+        birthday: birthday
+      })
+      .then(response => {
+        const data = response.data;
+        console.log(data);
+        window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+      })
+      .catch(e => {
+        console.log('error registering the user')
+      });
         console.log(username, password, email);
         /* Send a request to the server for authentication */
     /*then call props.onLoggedIn(username) */
@@ -43,7 +58,7 @@ export function RegistrationView(props){
           <Form.Control type="password" onChange={e => setPassword(e.target.value)} />
         </Form.Group>
 
-        <Form.Group controlId="formEmail">
+        <Form.Group  controlId="formEmail">
           <Form.Label>Email: </Form.Label>
           <Form.Control type="text" onChange={e => setEmail(e.target.value)} />
         </Form.Group>

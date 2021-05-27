@@ -1,13 +1,13 @@
 4312
-79/home/giuseppe/Desktop/myMovies-client/src/components/login-view/login-view.jsx1621530825800110917 0
+79/home/giuseppe/Desktop/myMovies-client/src/components/login-view/login-view.jsx1621594642209952583 0
 80/home/giuseppe/Desktop/myMovies-client/src/components/login-view/login-view.scss1621344401980669025 0
 64/home/giuseppe/Desktop/myMovies-client/src/components/login-view1621344401980669025 1
 80/home/giuseppe/Desktop/myMovies-client/src/components/movie-view/movie-view.scss1621361786684381474 0
 64/home/giuseppe/Desktop/myMovies-client/src/components/movie-card1621361767300235064 1
 94/home/giuseppe/Desktop/myMovies-client/src/components/registration-view/registration-view.scss1621520535284728701 0
-93/home/giuseppe/Desktop/myMovies-client/src/components/registration-view/registration-view.jsx1621520816139249837 0
-71/home/giuseppe/Desktop/myMovies-client/src/components/registration-view1621361914453338420 1
-53/home/giuseppe/Desktop/myMovies-client/src/index.scss1621586558021864801 0
+93/home/giuseppe/Desktop/myMovies-client/src/components/registration-view/registration-view.jsx1621610907518132189 0
+71/home/giuseppe/Desktop/myMovies-client/src/components/registration-view1621603744656721677 1
+53/home/giuseppe/Desktop/myMovies-client/src/index.scss1621604036806669380 0
 42/home/giuseppe/Desktop/myMovies-client/src1620983215864165262 1
 49/home/giuseppe/Desktop/myMovies-client/.gitignore1620813540176625281 0
 70/home/giuseppe/Desktop/myMovies-client/node_modules/fill-range/LICENSE499162500000000000 0
@@ -73,7 +73,7 @@
 86/home/giuseppe/Desktop/myMovies-client/node_modules/react-lifecycles-compat/LICENSE.md1516844056000000000 0
 106/home/giuseppe/Desktop/myMovies-client/node_modules/react-lifecycles-compat/react-lifecycles-compat.min.js1526049548000000000 0
 85/home/giuseppe/Desktop/myMovies-client/node_modules/react-lifecycles-compat/README.md1523718836000000000 0
-79/home/giuseppe/Desktop/myMovies-client/src/components/movie-card/movie-card.jsx1621531900112854259 0
+79/home/giuseppe/Desktop/myMovies-client/src/components/movie-card/movie-card.jsx1621610756061388918 0
 88/home/giuseppe/Desktop/myMovies-client/node_modules/react-lifecycles-compat/CHANGELOG.md1526049451000000000 0
 70/home/giuseppe/Desktop/myMovies-client/node_modules/warning/LICENSE.md499162500000000000 0
 72/home/giuseppe/Desktop/myMovies-client/node_modules/warning/package.json499162500000000000 0
@@ -1258,7 +1258,7 @@
 85/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/Fade/package.json499162500000000000 0
 79/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/ModalDialog1621498606969799983 1
 85/home/giuseppe/Desktop/myMovies-client/node_modules/react-overlays/Modal/package.json499162500000000000 0
-65/home/giuseppe/Desktop/myMovies-client/dist/index.02675e63.js.map1621586558149866963 0
+65/home/giuseppe/Desktop/myMovies-client/dist/index.02675e63.js.map1621610908042134749 0
 108/home/giuseppe/Desktop/myMovies-client/node_modules/react-overlays/mergeOptionsWithPopperConfig/package.json499162500000000000 0
 75/home/giuseppe/Desktop/myMovies-client/node_modules/react-overlays/Dropdown1621498606633803477 1
 92/home/giuseppe/Desktop/myMovies-client/node_modules/react-overlays/useRootClose/package.json499162500000000000 0
@@ -1340,7 +1340,7 @@
 79/home/giuseppe/Desktop/myMovies-client/node_modules/lodash-es/_baseEachRight.js499162500000000000 0
 112/home/giuseppe/Desktop/myMovies-client/node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelperLoose.js456789000000000000 0
 77/home/giuseppe/Desktop/myMovies-client/node_modules/dom-helpers/scrollbarSize1621498606781801938 1
-52/home/giuseppe/Desktop/myMovies-client/src/index.jsx1621586513101121956 0
+52/home/giuseppe/Desktop/myMovies-client/src/index.jsx1621608721635715677 0
 106/home/giuseppe/Desktop/myMovies-client/node_modules/@babel/runtime/helpers/esm/applyDecoratedDescriptor.js456789000000000000 0
 84/home/giuseppe/Desktop/myMovies-client/node_modules/dom-helpers/esm/insertAfter.d.ts499162500000000000 0
 102/home/giuseppe/Desktop/myMovies-client/node_modules/react-lifecycles-compat/react-lifecycles-compat.js1526049548000000000 0
@@ -2202,7 +2202,7 @@
 82/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/Modal.d.ts499162500000000000 0
 68/home/giuseppe/Desktop/myMovies-client/node_modules/lodash-es/xor.js499162500000000000 0
 92/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/NavbarBrand/package.json499162500000000000 0
-66/home/giuseppe/Desktop/myMovies-client/dist/index.d22b8a02.css.map1621586558133866693 0
+66/home/giuseppe/Desktop/myMovies-client/dist/index.d22b8a02.css.map1621610908014134612 0
 86/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/ButtonGroup.js499162500000000000 0
 110/home/giuseppe/Desktop/myMovies-client/node_modules/@popperjs/core/dist/esm/dom-utils/getBoundingClientRect.js499162500000000000 0
 92/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/ModalFooter/package.json499162500000000000 0
@@ -2424,7 +2424,7 @@
 81/home/giuseppe/Desktop/myMovies-client/node_modules/dom-helpers/esm/contains.d.ts499162500000000000 0
 88/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/FormControl.d.ts499162500000000000 0
 91/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/TabContext/package.json499162500000000000 0
-43/home/giuseppe/Desktop/myMovies-client/dist1621586558153867030 1
+43/home/giuseppe/Desktop/myMovies-client/dist1621610908042134749 1
 80/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/ToggleButton1621498606993799734 1
 72/home/giuseppe/Desktop/myMovies-client/node_modules/invariant/browser.js1520965460000000000 0
 87/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/TabContext.d.ts499162500000000000 0
@@ -2437,7 +2437,7 @@
 87/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/ModalContext.js499162500000000000 0
 69/home/giuseppe/Desktop/myMovies-client/node_modules/lodash/zipWith.js499162500000000000 0
 86/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/createWithBsPrefix1621498606933800357 1
-61/home/giuseppe/Desktop/myMovies-client/dist/index.02675e63.js1621586558145866895 0
+61/home/giuseppe/Desktop/myMovies-client/dist/index.02675e63.js1621610908038134729 0
 92/home/giuseppe/Desktop/myMovies-client/node_modules/react-overlays/cjs/manageAriaHidden.d.ts499162500000000000 0
 67/home/giuseppe/Desktop/myMovies-client/node_modules/lodash/plant.js499162500000000000 0
 97/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/triggerBrowserReflow.d.ts499162500000000000 0
@@ -2546,7 +2546,7 @@
 82/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/Media.d.ts499162500000000000 0
 86/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/ModalHeader.js499162500000000000 0
 99/home/giuseppe/Desktop/myMovies-client/node_modules/@popperjs/core/dist/esm/utils/computeOffsets.js499162500000000000 0
-62/home/giuseppe/Desktop/myMovies-client/dist/index.d22b8a02.css1621586558125866557 0
+62/home/giuseppe/Desktop/myMovies-client/dist/index.d22b8a02.css1621610908010134593 0
 78/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/cjs/Nav.js499162500000000000 0
 86/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/Toast/package.json499162500000000000 0
 80/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/CarouselItem1621498606925800441 1
@@ -2658,7 +2658,7 @@
 86/home/giuseppe/Desktop/myMovies-client/node_modules/node-addon-api/doc/async_worker.md499162500000000000 0
 86/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/CardGroup.d.ts499162500000000000 0
 100/home/giuseppe/Desktop/myMovies-client/node_modules/@babel/runtime/helpers/esm/wrapAsyncGenerator.js456789000000000000 0
-77/home/giuseppe/Desktop/myMovies-client/src/components/main-view/main-view.jsx1621531840812500021 0
+77/home/giuseppe/Desktop/myMovies-client/src/components/main-view/main-view.jsx1621593039278686506 0
 81/home/giuseppe/Desktop/myMovies-client/node_modules/@types/react-transition-group1621498606505804808 1
 70/home/giuseppe/Desktop/myMovies-client/node_modules/lodash/fp/curry.js499162500000000000 0
 78/home/giuseppe/Desktop/myMovies-client/node_modules/@babel/runtime/regenerator1621498606761802146 1
@@ -2688,7 +2688,7 @@
 99/home/giuseppe/Desktop/myMovies-client/node_modules/@babel/runtime/helpers/classPrivateMethodGet.js456789000000000000 0
 69/home/giuseppe/Desktop/myMovies-client/node_modules/lodash-es/ceil.js499162500000000000 0
 73/home/giuseppe/Desktop/myMovies-client/node_modules/lodash/fp/stubTrue.js499162500000000000 0
-54/home/giuseppe/Desktop/myMovies-client/dist/index.html1621586558125866557 0
+54/home/giuseppe/Desktop/myMovies-client/dist/index.html1621610908006134573 0
 84/home/giuseppe/Desktop/myMovies-client/node_modules/dom-helpers/cjs/insertAfter.d.ts499162500000000000 0
 69/home/giuseppe/Desktop/myMovies-client/node_modules/lodash/fp/take.js499162500000000000 0
 92/home/giuseppe/Desktop/myMovies-client/node_modules/react-bootstrap/esm/ResponsiveEmbed.d.ts499162500000000000 0
@@ -4046,7 +4046,7 @@
 69/home/giuseppe/Desktop/myMovies-client/node_modules/lodash/mapKeys.js499162500000000000 0
 71/home/giuseppe/Desktop/myMovies-client/node_modules/dom-helpers/closest1621498606717802604 1
 84/home/giuseppe/Desktop/myMovies-client/node_modules/dom-helpers/closest/package.json499162500000000000 0
-79/home/giuseppe/Desktop/myMovies-client/src/components/movie-view/movie-view.jsx1621535119914775718 0
+79/home/giuseppe/Desktop/myMovies-client/src/components/movie-view/movie-view.jsx1621610753365375621 0
 94/home/giuseppe/Desktop/myMovies-client/node_modules/@babel/runtime/helpers/isNativeFunction.js456789000000000000 0
 96/home/giuseppe/Desktop/myMovies-client/node_modules/dom-helpers/removeEventListener/package.json499162500000000000 0
 94/home/giuseppe/Desktop/myMovies-client/node_modules/@popperjs/core/dist/umd/popper.min.js.flow499162500000000000 0

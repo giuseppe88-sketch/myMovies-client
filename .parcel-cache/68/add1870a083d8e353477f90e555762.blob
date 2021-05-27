@@ -1,0 +1,43 @@
+var helpers = require("../../../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  _parcelHelpers.export(exports, "ProfileView", function () {
+    return ProfileView;
+  });
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('axios');
+  class ProfileView extends _reactDefault.default.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        username: "",
+        password: "",
+        email: "",
+        favoritesMovies: "",
+        watchListMovies: ""
+      };
+    }
+    componentDidMount() {}
+    getUser() {
+      this.setState({
+        username: localStorage.getItem("user"),
+        email: localStorage.getItem("email"),
+        birthday: localStorage.getItem('birthday'),
+        favoriteMovies: localStorage.getItem("favoriteMovies"),
+        watchListMovies: localStorage.getItem("watchListMovies")
+      });
+    }
+    render() {
+      console.log(favoritesMovies);
+    }
+  }
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
