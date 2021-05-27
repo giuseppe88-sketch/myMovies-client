@@ -17,7 +17,7 @@ export class ActorView extends React.Component{
             <Link to={`/`}>
                    <Button>Back</Button>
                </Link>
-             </Card.Body>
+             </Card.Body> 
              </Card>
           </div>
         )

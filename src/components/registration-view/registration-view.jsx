@@ -18,7 +18,7 @@ export function RegistrationView(props){
       axios.post('https://mymovies-db-api.herokuapp.com/users', {
         username: username,
         password: password,
-        email: email,
+        email: email, 
         birthday: birthday
       })
       .then(response => {

@@ -124,7 +124,7 @@ export class MainView extends React.Component {
         .catch(function(error){
             console.log(error)
         })
-    }
+    } 
     getActors(token){
         axios.get('https://mymovies-db-api.herokuapp.com/actors',{
             headers:{ Authorization: `Bearer ${token}`}
