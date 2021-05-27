@@ -29,7 +29,7 @@ export class MainView extends React.Component {
             directors:[],
             genres:[],
             actors:[],
-            userDetails:[]
+            favoritesMovies:[]
             
             
         }
@@ -148,8 +148,8 @@ export class MainView extends React.Component {
         })
         .then(response=>{
             this.setState({
-                userDetails:response.data})
-        
+                favoritesMovies:response.data})
+              //console.log(response.data)
         })
         
         
@@ -158,7 +158,7 @@ export class MainView extends React.Component {
      
        
     render(){
-        const { movies, user, directors, genres, actors, userDetails} = this.state;
+        const { movies, user, directors, genres, actors, favoritesMovies} = this.state;
         
         return (
         <Router>
@@ -238,14 +238,15 @@ export class MainView extends React.Component {
                 
              ))
              } }/>
-             <Route exact path="/user" render={() => {
-                return userDetails.map(m => (
-               <Col md={3} key={m._id}>
-                   <DirectorView userData={m} />
-                </Col>
+             <Route exact path="/users" render={() => {
+                console.log(favoritesMovies)
+                    return favoritesMovies.map(m => (
+                <Col md={3} key={m._id}>
+                    <ProfileView userData={m} />
+                 </Col>
                 
-            ))
-            } }/>
+             ))
+             } }/>
             
               
             </Row>

@@ -26310,7 +26310,7 @@ try {
   var _directorViewDirectorView = require('../director-view/director-view');
   var _genreViewGenreView = require('../genre-view/genre-view');
   var _actorViewActorView = require('../actor-view/actor-view');
-  require('../profile-view/profile-view');
+  var _profileViewProfileView = require('../profile-view/profile-view');
   var _jsxFileName = "/home/giuseppe/Desktop/myMovies-client/src/components/main-view/main-view.jsx";
   class MainView extends _reactDefault.default.Component {
     constructor() {
@@ -26322,7 +26322,7 @@ try {
         directors: [],
         genres: [],
         actors: [],
-        userDetails: []
+        favoritesMovies: []
       };
     }
     componentDidMount() {
@@ -26433,12 +26433,12 @@ try {
         }
       }).then(response => {
         this.setState({
-          userDetails: response.data
+          favoritesMovies: response.data
         });
       });
     }
     render() {
-      const {movies, user, directors, genres, actors, userDetails} = this.state;
+      const {movies, user, directors, genres, actors, favoritesMovies} = this.state;
       return (
         /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
           __self: this,
@@ -26820,24 +26820,25 @@ try {
           }
         }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
           exact: true,
-          path: "/user",
+          path: "/users",
           render: () => {
-            return userDetails.map(m => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapColDefault.default, {
+            console.log(favoritesMovies);
+            return favoritesMovies.map(m => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapColDefault.default, {
               md: 3,
               key: m._id,
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 243,
-                columnNumber: 16
+                lineNumber: 244,
+                columnNumber: 17
               }
-            }, /*#__PURE__*/_reactDefault.default.createElement(_directorViewDirectorView.DirectorView, {
+            }, /*#__PURE__*/_reactDefault.default.createElement(_profileViewProfileView.ProfileView, {
               userData: m,
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 244,
-                columnNumber: 20
+                lineNumber: 245,
+                columnNumber: 21
               }
             })));
           },
@@ -47234,15 +47235,48 @@ try {
   require('axios');
   require('react-bootstrap/Form');
   require('react-router-dom');
-  require('react-bootstrap/Card');
+  var _reactBootstrapCard = require('react-bootstrap/Card');
+  var _reactBootstrapCardDefault = _parcelHelpers.interopDefault(_reactBootstrapCard);
   require('react-bootstrap/Col');
-  class ProfileView extends _reactDefault.default.Component {}
+  var _jsxFileName = "/home/giuseppe/Desktop/myMovies-client/src/components/profile-view/profile-view.jsx";
+  class ProfileView extends _reactDefault.default.Component {
+    render() {
+      const {userData} = this.props;
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapCardDefault.default, {
+          border: "light",
+          className: "mb-4",
+          className: "mt-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapCardDefault.default.Body, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 19
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapCardDefault.default.Title, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21,
+            columnNumber: 21
+          }
+        }, userData.favotitesMovies)))
+      );
+    }
+  }
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-bootstrap/Button":"1ru0l","axios":"7rA65","react-bootstrap/Form":"6A5ko","react-router-dom":"1PMSK","react-bootstrap/Card":"1CZWQ","react-bootstrap/Col":"2D0r8","@parcel/transformer-js/lib/esmodule-helpers.js":"51WnV","../../../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1NuKA"}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire1eb1")
+},{"react":"3b2NM","react-bootstrap/Button":"1ru0l","axios":"7rA65","react-bootstrap/Form":"6A5ko","react-router-dom":"1PMSK","react-bootstrap/Card":"1CZWQ","react-bootstrap/Col":"2D0r8","../../../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1NuKA","@parcel/transformer-js/lib/esmodule-helpers.js":"51WnV"}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire1eb1")
 
 //# sourceMappingURL=index.02675e63.js.map
