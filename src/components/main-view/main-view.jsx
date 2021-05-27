@@ -16,7 +16,8 @@ import { MovieView} from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView }   from '../genre-view/genre-view';
 import { ActorView }   from '../actor-view/actor-view';
-import { ProfileView }  from '../profile-view/profile-view'
+import { ProfileView }  from '../profile-view/profile-view';
+
 export class MainView extends React.Component {
 
     constructor(){
@@ -28,7 +29,7 @@ export class MainView extends React.Component {
             directors:[],
             genres:[],
             actors:[],
-            favoritesMovies:[]
+            userDetails:[]
             
             
         }
@@ -142,21 +143,22 @@ export class MainView extends React.Component {
         })
     }
     getUsersFav(token){
-        axios.get('https://mymovies-db-api.herokuapp.com/users/'+ localStorage.getItem('user') + '/favorites/', {
+        axios.get('https://mymovies-db-api.herokuapp.com/users/'+ localStorage.getItem('user'), {
             headers:{ Authorization: `Bearer ${token}`}
         })
         .then(response=>{
-            this.setState({favoritesMovies:response.data
-            })
-            console.log(response.data)
-
-        });
+            this.setState({
+                userDetails:response.data})
+        
+        })
+        
         
     }
+    
      
        
     render(){
-        const { movies, user, directors, genres, actors } = this.state;
+        const { movies, user, directors, genres, actors, userDetails} = this.state;
         
         return (
         <Router>
@@ -236,7 +238,15 @@ export class MainView extends React.Component {
                 
              ))
              } }/>
-             
+             <Route exact path="/user" render={() => {
+                return userDetails.map(m => (
+               <Col md={3} key={m._id}>
+                   <DirectorView userData={m} />
+                </Col>
+                
+            ))
+            } }/>
+            
               
             </Row>
         </Router>
