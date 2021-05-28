@@ -11,10 +11,10 @@ export class GenreView extends React.Component{
             <div className="genres-view">
             <Card border="dark" className="mb-3" className="mt-4">
              <Card.Body>
-             <Card.Title><span className='text-primary'>Name: </span> {genresData.name}</Card.Title>
-            <Card.Text><span className='text-primary'>Bio: </span>{genresData.description}</Card.Text>
+             <Card.Title><span className='text-primary'></span> {genresData.name}</Card.Title>
+            <Card.Text><span className='text-primary'></span>{genresData.description}</Card.Text>
             <Link to={`/`}>
-                   <Button>Back</Button>
+                   <Button variant="link">Back</Button>
                </Link>
              </Card.Body>
              </Card>

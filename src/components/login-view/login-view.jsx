@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 
 export function LoginView(props){
     const [username, setUsername ] = useState('');
@@ -45,6 +45,9 @@ export function LoginView(props){
       <Button variant="dark" type="submit" onClick={handleSubmit}>
         Submit
       </Button>
+      <Link to={`/register`}>
+      <p>Sign in if you are not a member</p>
+      </Link>
   </Form>
   
   

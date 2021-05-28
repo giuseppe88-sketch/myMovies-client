@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-
 import {BrowserRouter as Router, Route, Redirect, Link} from "react-router-dom";
 
 
@@ -17,6 +16,9 @@ import { DirectorView } from '../director-view/director-view';
 import { GenreView }   from '../genre-view/genre-view';
 import { ActorView }   from '../actor-view/actor-view';
 import { ProfileView }  from '../profile-view/profile-view';
+import { UpdateViewProfile } from '../profile-view/profile-update';
+
+import { Navbar } from 'react-bootstrap';
 
 export class MainView extends React.Component {
 
@@ -44,7 +46,8 @@ export class MainView extends React.Component {
             this.getDirectors(accessToken);
             this.getGenres(accessToken);
             this.getActors(accessToken);
-            this.getUsersFav(accessToken)
+            this.getUsersFav(accessToken);
+            
         }
         
        
@@ -55,6 +58,11 @@ export class MainView extends React.Component {
            });
        }
        onRegisterIn(user){
+           this.setState({
+               user
+           })
+       }
+       onUpdate(user){
            this.setState({
                user
            })
@@ -70,7 +78,8 @@ export class MainView extends React.Component {
            this.getDirectors(authData.token);
            this.getGenres(authData.token);
            this.getActors(authData.token);
-           this.getUsersFav(authData.token)
+           this.getUsersFav(authData.token);
+          
        }
        onLoggedOut(){
            localStorage.removeItem('token');
@@ -148,12 +157,11 @@ export class MainView extends React.Component {
         })
         .then(response=>{
             this.setState({
-                favoritesMovies:response.data})
+                favoritesMovies:response.data.favoritesMovies})
               //console.log(response.data)
         })
-        
-        
     }
+      
     
      
        
@@ -162,8 +170,33 @@ export class MainView extends React.Component {
         
         return (
         <Router>
+             <Navbar bg="dark" variant="dark">
+       <Navbar.Brand>
+         <img src="https://pad.mymovies.it/v12/img/mymovies.png" width="140px"/>{" "}
+         
+       </Navbar.Brand>
+       <Link to={`/register`}>
+                   <Button variant="link">Sign in/Home</Button>
+               </Link>
+               <Link to={`/directors`}>
+                   <Button variant="link">Directors</Button>
+               </Link>
+               <Link to={`/actors`}>
+                   <Button variant="link">Actors</Button>
+               </Link> 
+               <Link to={`/genres`}>
+                   <Button variant="link">Genres</Button>
+               </Link>
+               <Link to={`/users`}>
+                   <Button variant="link">myFavorites</Button>
+               </Link> 
+               <Link to={`/users/update`}>
+                   <Button variant="link">Update/Delete your profile</Button>
+               </Link> 
+    </Navbar>
             <Row className="main-view justify-content-md-center">
-              <Route exact path="/" render={() => {
+            
+           <Route exact path="/" render={() => {
                 if (!user) return <Col>
                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
               </Col>
@@ -177,7 +210,7 @@ export class MainView extends React.Component {
             <Route path="/register" render={() => {
                if (user) return <Redirect to="/" /> 
              return <Col>
-                <RegistrationView />
+                <RegistrationView onRegisterIn={user=> this.onRegisterIn(user)}/>
                    </Col>
               }} />
                 <Route path="/movies/:movieId" render={({ match }) => {
@@ -238,18 +271,21 @@ export class MainView extends React.Component {
                 
              ))
              } }/>
-             <Route exact path="/users" render={() => {
-                console.log(favoritesMovies)
-                    return favoritesMovies.map(m => (
-                <Col md={3} key={m._id}>
-                    <ProfileView userData={m} />
-                 </Col>
-                
-             ))
-             } }/>
-            
-              
-            </Row>
+             <Route exact path="/users" render={()=>{
+                 console.log(favoritesMovies)
+                return favoritesMovies.map(m => (
+                    <Col md={9} key={m._id}>
+                      <ProfileView favoriteData={m}/>
+                      </Col>
+                    ))}} />
+             
+            <Route exact path="/users/update" render={() => { 
+                return <Col>
+                   <UpdateViewProfile onUpdate={user=> this.onUpdate(user)}/>
+                      </Col>
+                 }} />
+           
+                 </Row>
         </Router>
         );
     }

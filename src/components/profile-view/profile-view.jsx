@@ -8,21 +8,29 @@ import Col from 'react-bootstrap/Col';
 
 
 
-
-    export class ProfileView extends React.Component{
-        render(){
-            const { userData }= this.props;
-    
-            return (
-              
-                <Card border="light" className="mb-4" className="mt-3">
-                  
-                  <Card.Body>
-                    <Card.Title>{userData.favotitesMovies}</Card.Title>
-                    
-                  </Card.Body>
-                </Card>
-               
-              );
-        }
+export class ProfileView extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+          favoriteMovies: []
+          
+        };
     }
+    render(){
+
+        const { favoriteData } = this.props;
+
+      return(
+          <div>
+            
+            <Card border="light" bg="dark" text="white" className="mb-4" className="mt-3">
+            <Card.Body>
+              <Card.Title>{favoriteData}</Card.Title>
+              <Button>Delete</Button>
+            </Card.Body>
+          </Card>
+          </div> 
+        )
+    } 
+    
+}

@@ -11,11 +11,11 @@ export class ActorView extends React.Component{
             <div className="actor-view">
             <Card border="dark" className="mb-3" className="mt-4">
              <Card.Body>
-             <Card.Title><span className='text-primary'>Name: </span> {actorsData.name}</Card.Title>
-            <Card.Text><span className='text-primary'>Bio: </span>{actorsData.bio}</Card.Text>
-            <Card.Text><span className='text-primary'>movies: </span>{actorsData.movies}</Card.Text>
+             <Card.Title><span className='text-primary'></span> {actorsData.name}</Card.Title>
+            <Card.Text><span className='text-primary'></span>{actorsData.bio}</Card.Text>
+            <Card.Text><span className='text-primary'></span>{actorsData.movies}</Card.Text>
             <Link to={`/`}>
-                   <Button>Back</Button>
+                   <Button variant="link">Back</Button>
                </Link>
              </Card.Body> 
              </Card>

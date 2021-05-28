@@ -5,10 +5,11 @@ import Card from 'react-bootstrap/Card';
 
 import { Link } from "react-router-dom";
 
+
 export class MovieCard extends React.Component{
     render(){
-        const { movieData }= this.props;
-
+      
+      const { movieData }= this.props;
         return (
           
             <Card border="light" className="mb-4" className="mt-3">
@@ -27,12 +28,10 @@ export class MovieCard extends React.Component{
 }
 
 MovieCard.propTypes= {
-    movie:PropTypes.shape({
+    movieData:PropTypes.shape({
         title:PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
-        genre:PropTypes.string.isRequired,
-        director:PropTypes.string.isRequired,
-        imagePath: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
        }).isRequired,
-       onMovieClick:PropTypes.func.isRequired
+      // onMovieClick:PropTypes.func.isRequired
 };

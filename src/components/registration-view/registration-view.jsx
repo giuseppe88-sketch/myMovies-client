@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Navbar } from 'react-bootstrap'
 import Col from 'react-bootstrap/Col';
+import axios from 'axios';
 
 export function RegistrationView(props){
      
@@ -19,7 +20,7 @@ export function RegistrationView(props){
         username: username,
         password: password,
         email: email, 
-        birthday: birthday
+       // birthdate: birthdate
       })
       .then(response => {
         const data = response.data;
@@ -38,13 +39,6 @@ export function RegistrationView(props){
 
         return (
   <div className="registration-view">
-    <Navbar bg="dark" variant="dark">
-       <Navbar.Brand>
-         <img src="https://pad.mymovies.it/v12/img/mymovies.png" width="140px"/>{" "}
-        
-       </Navbar.Brand>
-
-    </Navbar>
     <Form className="form-label">
       <h2>Welcome to MyMoviesApp</h2>
       
