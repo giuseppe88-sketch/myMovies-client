@@ -61256,7 +61256,7 @@ try {
           columnNumber: 7
         }
       }, "myMovies"), ".com"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
-        className: "text-center",
+        cll: true,
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -62136,4 +62136,4 @@ try {
 
 },{"react":"3b2NM","react-dom":"2sg1U","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","react-bootstrap":"4n7hB","react-bootstrap/Col":"2D0r8","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"51WnV","../../../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1NuKA"}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire1eb1")
 
-//# sourceMappingURL=index.02675e63.js.map
+//# sourceMappingURL=index.HASH_REF_f9eab60bc3a7a7c3f683683702675e63.js.map

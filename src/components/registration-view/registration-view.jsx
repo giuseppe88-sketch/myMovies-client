@@ -83,7 +83,7 @@ const formValidation = () => {
       <h1>
       <span className="font-weight-bold">myMovies</span>.com
       </h1>
-      <h2>Sign up</h2>
+      <h2 className="text-center">Sign up</h2>
       
         <Form.Group controlId="formUsername">
           <Form.Label>Username: </Form.Label>
