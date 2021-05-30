@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myMovies</title>
+    <link rel="stylesheet" href="4f9ce94914df6fb6dadce05a7c7961a6" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <div class="app-container"></div>
+    <script src="ba52405b23f1ffb73d1c04c33e81fe6d"></script>
+</body>
+</html>

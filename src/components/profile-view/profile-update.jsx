@@ -13,9 +13,14 @@ export function UpdateViewProfile(props){
     const [password,setPassword] = useState('');
     const [email,setEmail]      =  useState('user.email');
     
+    const [usernameError, setUsernameError] = useState({});
+    const [passwordError, setPasswordError] = useState({});
+    const [emailError, setEmailError] = useState({});
 
     const updateRequest = (e) => {
       e.preventDefault();
+      const isValid = formValidation();
+      if (isValid) {
       axios.post('https://mymovies-db-api.herokuapp.com/users', {
         username: username,
         password: password,
@@ -35,6 +40,33 @@ export function UpdateViewProfile(props){
     /*then call props.onLoggedIn(username) */
         props.onUpdate(username);
     };
+  }
+  const formValidation = () => {
+    const usernameError = {};
+    const passwordError = {};
+    const emailError = {};
+    let isValid = true;
+
+    if (username.trim().length < 5) {
+      usernameError.usernameShort = "Username must be at least 5 characters";
+      isValid = false;
+    }
+
+    if (password.trim().length < 1) {
+      passwordError.passwordMissing = "You must enter a password";
+      isValid = false;
+    }
+
+    if (!email.includes(".") && !email.includes("@")) {
+      emailError.emailNotEmail = "A valid email address is required";
+      isValid = false;
+    }
+
+    setUsernameError(usernameError);
+    setPasswordError(passwordError);
+    setEmailError(emailError);
+    return isValid;
+  };
     const deleteRequest = e => {
         e.preventDefault();
         axios
@@ -60,21 +92,39 @@ export function UpdateViewProfile(props){
           <Form.Label>Username: </Form.Label>
           <Form.Control type="text" onChange={e => setUsername(e.target.value)} />
         </Form.Group>
-
+        {Object.keys(usernameError).map((key) => {
+            return (
+              <div key={key} style={{ color: "red" }}>
+                {usernameError[key]}
+              </div>
+            );
+          })}
         <Form.Group controlId="formPassword">
           <Form.Label>Password: </Form.Label>
           <Form.Control type="password" onChange={e => setPassword(e.target.value)} />
         </Form.Group>
-
+        {Object.keys(passwordError).map((key) => {
+            return (
+              <div key={key} style={{ color: "red" }}>
+                {passwordError[key]}
+              </div>
+            );
+          })}
         <Form.Group  controlId="formEmail">
           <Form.Label>Email: </Form.Label>
           <Form.Control type="text" onChange={e => setEmail(e.target.value)} />
         </Form.Group>
-
-        <Button variant="dark" type="submit" onClick={updateRequest}>
+        {Object.keys(emailError).map((key) => {
+            return (
+              <div key={key} style={{ color: "red" }}>
+                {emailError[key]}
+              </div>
+            );
+          })}
+        <Button className="btn-lg btn-dark btn-block" variant="dark" type="submit" onClick={updateRequest}>
           Submit
         </Button>
-        <Button variant='danger' className='primary-btn' type='submit' onClick={deleteRequest}><span className='text-color'>Delete Profile</span></Button>
+        <Button className="btn-lg btn-block" variant='danger' type='submit' onClick={deleteRequest}><span className='text-color'>Delete Profile</span></Button>
     </Form>
   </div>
   );

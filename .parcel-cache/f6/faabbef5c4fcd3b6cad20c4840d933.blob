@@ -1,0 +1,24 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _reactRouter = require("react-router");
+var _jsxFileName = "/home/giuseppe/Desktop/myMovies-client/src/components/navbar/navbar.jsx";
+function NavBar(props) {
+  if (props.location.pathname === "/login") {
+    return false;
+  }
+  return (
+    /*#__PURE__*/React.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8,
+        columnNumber: 8
+      }
+    }, "NAVBAR")
+  );
+}
+_c = NavBar;
+exports.default = _c2 = _reactRouter.withRouter(Navar);
+var _c, _c2;
+$RefreshReg$(_c, "NavBar");
+$RefreshReg$(_c2, "%default%");

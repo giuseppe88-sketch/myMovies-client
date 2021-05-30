@@ -1,0 +1,12 @@
+.form-label {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  height: 100%;
+  background-color: wh;
+}
+
+h1 {
+  padding-top: 40px;
+}

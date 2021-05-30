@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import { Navbar } from 'react-bootstrap';
 
 export class DirectorView extends React.Component{
     render(){

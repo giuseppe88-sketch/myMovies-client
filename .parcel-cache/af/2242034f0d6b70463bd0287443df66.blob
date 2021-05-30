@@ -1,0 +1,7 @@
+.navigation-bar {
+  display: none;
+}
+
+.form-label {
+  display: none;
+}

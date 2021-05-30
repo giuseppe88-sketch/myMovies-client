@@ -1,0 +1,22 @@
+.form-label {
+  width: 100%;
+  max-width: 330px;
+  padding: 1;
+}
+
+.my-flix {
+  color: steelblue;
+}
+
+.app-container {
+  background-color: rgba(216, 216, 216, 0.788);
+  height: auto;
+}
+
+.form-label h2 {
+  color: rgba(7, 7, 7, 0.973);
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+/*# sourceMappingURL=index.HASH_REF_483382a0c90396020ca7c1c4778c89a2.css.map */

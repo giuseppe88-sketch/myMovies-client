@@ -1,0 +1,216 @@
+var helpers = require("../../../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  _parcelHelpers.export(exports, "LoginView", function () {
+    return LoginView;
+  });
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _propTypes = require('prop-types');
+  var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
+  var _reactBootstrapForm = require('react-bootstrap/Form');
+  var _reactBootstrapFormDefault = _parcelHelpers.interopDefault(_reactBootstrapForm);
+  var _reactBootstrapButton = require('react-bootstrap/Button');
+  var _reactBootstrapButtonDefault = _parcelHelpers.interopDefault(_reactBootstrapButton);
+  var _axios = require('axios');
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _reactRouterDom = require('react-router-dom');
+  require('reactstrap');
+  require('react-social-login-buttons');
+  require('./login-view.scss');
+  var _jsxFileName = "/home/giuseppe/Desktop/myMovies-client/src/components/login-view/login-view.jsx", _s = $RefreshSig$();
+  function LoginView(props) {
+    _s();
+    const [username, setUsername] = _react.useState('');
+    const [password, setPassword] = _react.useState('');
+    const [usernameError, setUsernameError] = _react.useState({});
+    const [passwordError, setPasswordError] = _react.useState({});
+    const handleSubmit = e => {
+      e.preventDefault();
+      const isValid = formValidation();
+      console.log(username, password);
+      /*Send a request to the server for authentication*/
+      if (isValid) {
+        _axiosDefault.default.post('https://mymovies-db-api.herokuapp.com/login', {
+          username: username,
+          password: password
+        }).then(response => {
+          const data = response.data;
+          props.onLoggedIn(data);
+        }).catch(e => {
+          console.log('no such user');
+        });
+      }
+      ;
+    };
+    const formValidation = () => {
+      const usernameError = {};
+      const passwordError = {};
+      let isValid = true;
+      if (username.trim().length < 5) {
+        usernameError.usernameShort = 'Username must be at least 5 characters';
+        isValid = false;
+      }
+      if (password.trim().length === 0) {
+        passwordError.passwordRequired = 'Password is required';
+        isValid = false;
+      }
+      if (password.trim().length < 6) {
+        passwordError.passwordMissing = 'Password must be at least 6 characters';
+        isValid = false;
+      }
+      setUsernameError(usernameError);
+      setPasswordError(passwordError);
+      return isValid;
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default, {
+        className: "form-label",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71,
+          columnNumber: 8
+        }
+      }, " className=\"\"Log in")), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default.Group, {
+        controlId: "formUsername",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default.Label, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 75,
+          columnNumber: 9
+        }
+      }, "Username: "), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default.Control, {
+        type: "text",
+        onChange: e => setUsername(e.target.value),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 76,
+          columnNumber: 9
+        }
+      })), Object.keys(usernameError).map(key => {
+        return (
+          /*#__PURE__*/_reactDefault.default.createElement("div", {
+            key: key,
+            style: {
+              color: "red"
+            },
+            className: "alert",
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 81,
+              columnNumber: 11
+            }
+          }, usernameError[key], " ")
+        );
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default.Group, {
+        controlId: "formPassword",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default.Label, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85,
+          columnNumber: 9
+        }
+      }, "Password: "), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default.Control, {
+        type: "password",
+        onChange: e => setPassword(e.target.value),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86,
+          columnNumber: 9
+        }
+      })), Object.keys(passwordError).map(key => {
+        return (
+          /*#__PURE__*/_reactDefault.default.createElement("div", {
+            key: key,
+            style: {
+              color: "red"
+            },
+            className: "alert",
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 90,
+              columnNumber: 11
+            }
+          }, passwordError[key])
+        );
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapButtonDefault.default, {
+        variant: "dark",
+        type: "submit",
+        onClick: handleSubmit,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93,
+          columnNumber: 7
+        }
+      }, "Submit"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: `/register`,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97,
+          columnNumber: 7
+        }
+      }, "Sign in if you are not a member")))
+    );
+  }
+  _s(LoginView, "KCUKD6l1FYiF7FO8yym4Fh3hdhU=");
+  _c = LoginView;
+  LoginView.propTypes = {
+    user: _propTypesDefault.default.shape({
+      username: _propTypesDefault.default.string.isRequired,
+      password: _propTypesDefault.default.string.isRequired
+    }),
+    onLoggedIn: _propTypesDefault.default.func.isRequired
+  };
+  var _c;
+  $RefreshReg$(_c, "LoginView");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
