@@ -206,6 +206,9 @@ export class MainView extends React.Component {
                <Link to={`/users/update`}>
                    <Button variant="link">Update/Delete your profile</Button>
                </Link> 
+               <Link to={`/`}>
+                   <Button variant="primary" className='primary-btn' onClick={()=> this.onLoggedOut()}><span className='text-color'>Logout</span></Button>
+               </Link> 
     </Navbar>
             <Row className="main-view justify-content-md-center">
            <Route exact path="/" render={() => {
