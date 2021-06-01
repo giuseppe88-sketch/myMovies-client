@@ -17,12 +17,13 @@ h1 {
   margin: auto;
   height: 100%;
 }
+
 .my-flix {
   color: steelblue;
 }
 
 .app-container {
-  background-color: rgba(216, 216, 216, 0.788);
+  background-color: #eeeeee;
   height: auto;
 }
 

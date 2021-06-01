@@ -12,10 +12,10 @@ export class MovieView extends React.Component {
     render(){
         const {movie, onBackClick } = this.props
         return(
-           <Card border="light" className="mt-3">
+           <Card border="light" className="mt-3" >
               <Card.Img variant="top" src={movie.image} />
               <Card.Body>
-                <Card.Title>{movie.title}</Card.Title>
+                <Card.Title><span className='value'>{movie.title}</span></Card.Title>
                 <Card.Title>Rating: {movie.Rating}</Card.Title>
                 <Card.Text>{movie.description}</Card.Text>
                 <Link to={`/directors/${movie.director.name}`}>

@@ -8,6 +8,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
+import './main-view.scss';
+
 
 import { RegistrationView} from '../registration-view/registration-view' 
 import { LoginView } from '../login-view/login-view';
@@ -183,11 +185,13 @@ export class MainView extends React.Component {
               }} />
 
 <>
-             <Navbar bg="dark" variant="dark">
+             <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
        <Navbar.Brand>
          <img src="https://pad.mymovies.it/v12/img/mymovies.png" width="140px"/>{" "}
          
        </Navbar.Brand>
+       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+       <Navbar.Collapse id="responsive-navbar-nav">
        <Link to={`/register`}>
                    <Button variant="link">Movies</Button>
                </Link>
@@ -204,11 +208,12 @@ export class MainView extends React.Component {
                    <Button variant="link">myFavorites</Button>
                </Link> 
                <Link to={`/users/update`}>
-                   <Button variant="link">Update/Delete your profile</Button>
+                   <Button variant="link">Update</Button>
                </Link> 
                <Link to={`/`}>
                    <Button variant="primary" className='primary-btn' onClick={()=> this.onLoggedOut()}><span className='text-color'>Logout</span></Button>
                </Link> 
+        </Navbar.Collapse>
     </Navbar>
             <Row className="main-view justify-content-md-center">
            <Route exact path="/" render={() => {
