@@ -1,8 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux';
 import { useLocation } from "react-router-dom";
 import {BrowserRouter as Router, Route, Redirect, Link, Switch} from "react-router-dom";
 
+import { setMovies } from '../../actions/actions';
+import MoviesList from '../movies-list/movies-list';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -27,7 +30,7 @@ export class MainView extends React.Component {
     constructor(){
         super();
         this.state = {
-            movies: [],
+          //  movies: [],
             selectedMovie: null,
             user:null,
             directors:[],
@@ -95,11 +98,8 @@ export class MainView extends React.Component {
            })
            .then(response=> {
               // assign result to the state
-              this.setState({
-                  movies:response.data
-              });
-              
-           })
+              this.props.setMovies(response.data);
+            })
            .catch(function(error){
                console.log(error)
            })
@@ -162,11 +162,14 @@ export class MainView extends React.Component {
               //console.log(response.data)
         })
     }
+  
+    
     
      
        
     render(){
-        const { movies, user, directors, genres, actors, favoritesMovies} = this.state;
+        const { user, directors, genres, actors, favoritesMovies} = this.state;
+        const {movies} = this.props;
         
         return (
             <Router>
@@ -193,25 +196,26 @@ export class MainView extends React.Component {
        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
        <Navbar.Collapse id="responsive-navbar-nav">
        <Link to={`/register`}>
-                   <Button variant="link">Movies</Button>
+                   <Button style={{color:"#00005c"}} variant="link">Movies</Button>
                </Link>
                <Link to={`/directors`}>
-                   <Button variant="link">Directors</Button>
+                   <Button style={{color:"#00005c"}} variant="link">Directors</Button>
                </Link>
                <Link to={`/actors`}>
-                   <Button variant="link">Actors</Button>
+                   <Button style={{color:"#00005c"}} variant="link">Actors</Button>
                </Link> 
                <Link to={`/genres`}>
-                   <Button variant="link">Genres</Button>
+                   <Button style={{color:"#00005c"}} variant="link">Genres</Button>
                </Link>
                <Link to={`/users`}>
-                   <Button variant="link">myFavorites</Button>
+                   <Button style={{color:"#00005c"}} variant="link">myFavorites</Button>
                </Link> 
                <Link to={`/users/update`}>
-                   <Button variant="link">Update</Button>
+                   <Button style={{color:"#00005c",margin:"15px"}} variant="link">Update</Button>
                </Link> 
                <Link to={`/`}>
                    <Button variant="primary" className='primary-btn' onClick={()=> this.onLoggedOut()}><span className='text-color'>Logout</span></Button>
+                   
                </Link> 
         </Navbar.Collapse>
     </Navbar>
@@ -223,11 +227,7 @@ export class MainView extends React.Component {
                }} />
             <Route exact path="/movies" render={()=>{
                 if (movies.length === 0) return <div className="main-view" />;
-                return movies.map(m => (
-                    <Col md={4} key={m._id}>
-                  <MovieCard movieData={m} />
-                  </Col>
-                ))
+                return <MoviesList movies={movies} /> 
             }} />
                 <Route path="/movies/:movieId" render={({ match }) => {
                     if(!user) return <Col>
@@ -308,3 +308,7 @@ export class MainView extends React.Component {
         );
     }
 }
+let mapStateToProps = state => {
+    return { movies: state.movies }
+  }
+  export default connect(mapStateToProps, { setMovies } )(MainView);
