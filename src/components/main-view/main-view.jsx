@@ -185,7 +185,7 @@ export class MainView extends React.Component {
               }} />
 
 <>
-             <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
+             <Navbar collapseOnSelect bg="light" variant="dark" expand="lg">
        <Navbar.Brand>
          <img src="https://pad.mymovies.it/v12/img/mymovies.png" width="140px"/>{" "}
          
@@ -224,7 +224,7 @@ export class MainView extends React.Component {
             <Route exact path="/movies" render={()=>{
                 if (movies.length === 0) return <div className="main-view" />;
                 return movies.map(m => (
-                    <Col md={3} key={m._id}>
+                    <Col md={4} key={m._id}>
                   <MovieCard movieData={m} />
                   </Col>
                 ))

@@ -21,9 +21,8 @@ export class MovieCard extends React.Component{
               <Card.Img variant="top" src={movieData.image} />
               <Card.Body>
                 <Card.Title><span className='value font-italic'>{movieData.title}</span></Card.Title>
-                <Card.Text>{movieData.description}</Card.Text>
                 <Link to={`/movies/${movieData._id}`}>
-                <Button variant="link">Open</Button>
+                <Button variant="link">See details</Button>
                 </Link>
               </Card.Body>
             </Card>

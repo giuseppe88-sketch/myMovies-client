@@ -26774,7 +26774,7 @@ try {
               })
             );
             return movies.map(m => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapColDefault.default, {
-              md: 4,
+              md: 3,
               key: m._id,
               __self: this,
               __source: {
@@ -64326,4 +64326,4 @@ exports.devToolsEnhancer =
 
 },{"redux":"7panR"}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire1eb1")
 
-//# sourceMappingURL=index.02675e63.js.map
+//# sourceMappingURL=index.HASH_REF_f9eab60bc3a7a7c3f683683702675e63.js.map
